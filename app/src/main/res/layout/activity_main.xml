@@ -4,18 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:textAlignment="center"
+    tools:context=".MainActivity"
+    android:background ="@color/back">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:id = "@+id/text1"
-        />
+        android:id = "@+id/rec_1"
+        app:layoutManager="LinearLayoutManager"
 
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

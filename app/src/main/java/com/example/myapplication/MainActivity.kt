@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import androidx.activity.viewModels
+import androidx.appcompat.app.ActionBar
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.Adapters.Rec1_adapter
@@ -17,10 +18,9 @@ class MainActivity : AppCompatActivity() {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_main)
             val myApp = applicationContext as Newsapplication
-
             val db = myApp.database
-
-
+            supportActionBar?.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM)
+            supportActionBar?.setCustomView(R.layout.heading_layout)
             Log.d("aj" , "main_act")
             val viewModel : NewsViewModel by viewModels()
             viewModel.initrepo(db)

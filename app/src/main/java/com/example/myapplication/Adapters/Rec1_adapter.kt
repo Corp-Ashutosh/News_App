@@ -36,7 +36,7 @@ class Rec1_adapter(private val context: Context, private val items: List<Headlin
             .into(holder.image)
         holder.title.text = item.title
         holder.author.text= item.author
-        holder.date.text = item.publishedAt
+        holder.date.text = item.publishedAt.subSequence(0,10)
 
         holder.itemView.setOnClickListener {
             val context = holder.itemView.context
